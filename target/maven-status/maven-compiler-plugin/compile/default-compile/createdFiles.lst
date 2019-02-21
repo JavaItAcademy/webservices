@@ -1,0 +1,3 @@
+kg\itacademy\model\User.class
+kg\itacademy\service\UserService.class
+kg\itacademy\dao\UserDao.class
