@@ -19,6 +19,7 @@ public class UserDao {
         userMap.put(user1.getId(), user1);
         userMap.put(user2.getId(), user2);
         userMap.put(user3.getId(), user3);
+        System.out.println("In users");
 
     }
 
@@ -27,6 +28,7 @@ public class UserDao {
     }
 
     public static User addUser(User user) {
+        System.out.println(user);
         userMap.put(user.getId(), user);
         return user;
     }
@@ -48,5 +50,14 @@ public class UserDao {
 //        System.out.println(list);
 //        return list;
         return new ArrayList<User>(userMap.values());
+    }
+
+    public static boolean authorize(String login, String password){
+        for (User user : userMap.values()) {
+            if (user.getName().equals(login) && user.getPassword().equals(password) ){
+                return true;
+            }
+        }
+        return false;
     }
 }

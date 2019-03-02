@@ -54,4 +54,14 @@ public class User {
     public void setDateCreated(LocalDateTime dateCreated) {
         this.dateCreated = dateCreated;
     }
+
+    @Override
+    public String toString() {
+        return "User{" +
+                "name='" + name + '\'' +
+                ", password='" + password + '\'' +
+                ", id=" + id +
+                ", dateCreated=" + dateCreated +
+                '}';
+    }
 }
